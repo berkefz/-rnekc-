@@ -1,0 +1,72 @@
+//  parametre olarak gönderilen sayının tek(odd) mi çift (even) mi olduğunu bulan metot.
+std::string isEvenOrOdd(int num) {
+	return (num % 2 == 0) ? "Even" : "Odd";
+	//if (num % 2 == 0) return "Even"; else return "Odd";
+}
+
+// 1 - parametre olarak gönderilen iki sayısı üzerinde 4 işlem yaparak 24 sayının elde etmelisiniz.
+// 2 - 24 sayısını elde ettiğiniz işlemi string olarak geri dönüş olarak gönderin.
+std::string operation(int num1, int num2) {
+	if (num1 + num2 == 24) return "added";
+	else if (num1 - num2 == 24 || num2 - num1 == 24) return "subtracted";
+	else if (num1 / num2 == 24 || num2 / num1 == 24) return "divided";
+	else if (num1 * num2 == 24) return "multiplied";
+	else return "Invalid";
+}
+
+//
+bool divisibleByFive(int num) {
+	return  (num % 5 == 0) ? true : false;
+	// daha kısa cevap
+	// return num%5==0;
+}
+
+// ?: operatörünü kullanarak, parametre doğru ise yeah yanlış ise nope yazdıran metodu yazın
+std::string yeahNope(bool b) {
+	return	(b) ? "yeah" : "nope";
+	//return b==1? "yeah":"nope";
+}
+
+// bir kişinin MA15+ derecelendirmeli bir filmi izleyebilip izleyemeyeceğini kontrol eden bir metot yazın
+// yaş en az 15 olabilir
+// ebeveyn kontrolü olacak
+bool acceptIntoMovie(int age, bool isSupervised) {
+	if (age >= 15 && isSupervised == true) return true;
+	else if (age >= 15 && isSupervised == false) return true;
+	else if (age < 15 && isSupervised == false) return false;
+	else if (age < 15 && isSupervised == true) return true;
+	// Kısa Cevap
+	// return age < 15 && isSupervised == 0 ? 0 : 1;
+}
+
+// aldığı parametreye selam veren metodu yazın.
+std::string helloName(std::string name) {
+	return 	"Hello " + name + "!";
+}
+
+// num1 üs num2 olacak şekilde çalışan metoıdu yazınız.
+#include <cmath>
+double calculateExponent(double num1, double num2) {
+	//yol 1
+	return	pow(num1, num2);
+
+	// yol2
+	//double sonuc = 1;
+	//for (int i = 1; i <= num2; i++)
+	//	sonuc = sonuc * num1;
+	//return sonuc;
+}
+
+// bir dizi olarak sayı alan ve	sayıların küplerinin toplamlarını veren metodu yazın.
+#include <cmath>
+#include <iostream>
+#include <vector>
+using namespace std;
+int sumOfCubes(std::vector<int> nums) {
+	double sonuc = 0;
+	for (int i = 0; i < nums.size(); i++)
+		sonuc += pow(nums[i], 3);
+	return sonuc;
+}
+
+//assd
